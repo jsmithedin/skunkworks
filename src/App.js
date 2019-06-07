@@ -14,6 +14,7 @@ class App extends Component {
 
     handleChange (event) {
         this.setState({voucherSought: event.target.value})
+        this.setState({voucherValue: ''})
     }
 
     handleClick (event) {
