@@ -7,12 +7,14 @@ class App extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            voucherSought: ''
+            voucherSought: '',
+            voucherValue: ''
         }
     }
 
     handleChange (event) {
         this.setState({voucherSought: event.target.value})
+        this.setState({voucherValue: 'd622741a-5b40-4946-9268-3c31c3ca3849'})
     }
 
     handleClick (event) {
@@ -42,7 +44,8 @@ class App extends Component {
                 </form>
             </div>
                 <div className='reply__container'>
-                    <p>d622741a-5b40-4946-9268-3c31c3ca3849</p>
+                    <p>{this.state.voucherValue}</p>
+                    <p></p>
                 </div>
             </div>
         )
