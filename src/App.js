@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import vending_machine from './vending_machine.jpg'
-import axios from 'axios'
 
 class App extends Component {
     constructor (props) {
@@ -18,7 +17,8 @@ class App extends Component {
     }
 
     handleClick (event) {
-        this.setState({voucherValue: 'd622741a-5b40-4946-9268-3c31c3ca3849'})
+        const uuidv1 = require('uuid/v1');
+        this.setState({voucherValue: uuidv1()})
         console.log('Selection was ' + this.state.voucherSought)
         event.preventDefault()
         // axios.get('https://api.github.com/users/jsmithedin')
