@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     handleChange (event) {
-        this.setState({voucherSought: event.target.value};
+        this.setState({voucherSought: event.target.value})
     }
 
     handleClick (event) {
