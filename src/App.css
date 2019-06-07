@@ -1,0 +1,19 @@
+.image_container {
+  text-align: center;
+}
+.button__container {
+  margin-top: 50px;
+  text-align: center;
+}
+.reply__container {
+  margin-top: 50px;
+  text-align: center;
+}
+.button {
+  background-color:green;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  width: 200px;
+}

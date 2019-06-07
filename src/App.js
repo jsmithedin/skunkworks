@@ -1,0 +1,51 @@
+import React, { Component } from 'react'
+import './App.css'
+import vending_machine from './vending_machine.jpg'
+import axios from 'axios'
+
+class App extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            voucherSought: ''
+        }
+    }
+
+    handleChange (event) {
+        this.setState({voucherSought: event.target.value})
+    }
+
+    handleClick (event) {
+        console.log('Selection was ' + this.state.voucherSought)
+        event.preventDefault()
+        // axios.get('https://api.github.com/users/jsmithedin')
+        //     .then(response => this.setState({username: response.data.name}))
+    }
+
+    render () {
+        return (
+            <div>
+            <div className='image_container'>
+                <img src={vending_machine} alt="Vending Machine"/>
+            </div>
+            <div className='button__container'>
+                <form onSubmit={this.handleClick.bind(this)}>
+                    <label>
+                        Whatcha Want?!
+                        <select value={this.state.voucherSought} onChange={this.handleChange.bind(this)}>
+                            <option value="aws">AWS</option>
+                            <option value="azure">AZURE</option>
+                            <option value="gcp">GCP</option>
+                        </select>
+                    </label>
+                    <input type="submit" value={"Submit"} />
+                </form>
+            </div>
+                <div className='reply__container'>
+                    <p>d622741a-5b40-4946-9268-3c31c3ca3849</p>
+                </div>
+            </div>
+        )
+    }
+}
+export default App
