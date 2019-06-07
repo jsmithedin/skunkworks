@@ -13,11 +13,11 @@ class App extends Component {
     }
 
     handleChange (event) {
-        this.setState({voucherSought: event.target.value})
-        this.setState({voucherValue: 'd622741a-5b40-4946-9268-3c31c3ca3849'})
+        this.setState({voucherSought: event.target.value};
     }
 
     handleClick (event) {
+        this.setState({voucherValue: 'd622741a-5b40-4946-9268-3c31c3ca3849'})
         console.log('Selection was ' + this.state.voucherSought)
         event.preventDefault()
         // axios.get('https://api.github.com/users/jsmithedin')
